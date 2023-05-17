@@ -1,0 +1,3 @@
+class Person {}
+
+class Actor {}
