@@ -16,7 +16,7 @@ const instructor3 = {
   name: "Ali",
   age: 24,
   character: "Caring",
-  interests: ["Coding", "Being a good frien"],
+  interests: ["Coding", "Being a good friend"],
 };
 
 // DRY
@@ -27,7 +27,7 @@ const instructor3 = {
 // Class Syntax
 class Instructor {
   // class Name: Singular and Upper case
-  // Syntax Difference: class and object
+  // Syntax Difference: class and object (class varName = ,)
   name = "Omar";
   age = 26;
   character = "fun to be around";
@@ -42,7 +42,7 @@ class Instructor {
   }
 }
 
-const newInstructor = new Instructor(); // Created new instance of Instructor
+const newInstructor = new Instructor(); // Created new instance of Instructor => object
 console.log(newInstructor);
 
 console.log(newInstructor.age); // . for possessiveness
@@ -50,13 +50,16 @@ newInstructor.topics.forEach((topic) => console.log(topic));
 newInstructor.introduceInstructor();
 
 class Meal {
+  // properties
   name = "Majboos";
   origin = "Kuwait";
   fans = 100;
   ingredients = ["Rice", "Chicken", "Hashow"];
 
+  // methods
   logIngredients() {
-    console.log(this.ingredients);
+    // console.log(this.ingredients);
+    this.ingredients.forEach(ingredient => console.log(ingredient))
   }
 
   cookMeal() {
